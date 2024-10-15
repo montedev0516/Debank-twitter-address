@@ -19,6 +19,8 @@ url = 'https://debank.com/ranking?page='
 page_num = 200
 
 for page_id in range(98, page_num + 1):
+
+
     driver.get(url + str(page_id))
     driver.implicitly_wait(5)
 
