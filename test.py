@@ -18,7 +18,7 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 url = 'https://debank.com/ranking?page='
 page_num = 200
 
-for page_id in range(95, page_num + 1):
+for page_id in range(91, page_num + 1):
     driver.get(url + str(page_id))
     driver.implicitly_wait(5)
 
@@ -48,5 +48,5 @@ for page_id in range(95, page_num + 1):
                     open_out.close()
                     break
         driver.find_element(By.TAG_NAME, 'body').send_keys(Keys.ESCAPE)
-        sleep(0.3)
+        sleep(0.2)
     sleep(random.uniform(3, 8))
